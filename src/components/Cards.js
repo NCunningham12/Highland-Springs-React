@@ -37,7 +37,7 @@ function Cards() {
             />
             <CardItem
               src={require('../img/bronze-statue.JPG')}
-              text="Beautiful fairways surrounding a lake, nestled in a quiet retirement community"
+              text="Your one-stop shop for all of your golfing and snacking needs"
               label="Pro Shop"
               path="/pro-shop"
             />

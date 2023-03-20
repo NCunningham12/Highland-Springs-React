@@ -9,6 +9,7 @@ import MensClub from './components/pages/MensClub';
 import TravelClub from './components/pages/TravelClub';
 import ProShop from './components/pages/ProShop';
 import SignUp from './components/pages/SignUp';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/pro-shop" Component={ProShop} />
           <Route path="/sign-up" Component={SignUp} />
         </Routes>
+        <Footer />
       </Router>
     </>
   );
