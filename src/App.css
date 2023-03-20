@@ -8,9 +8,9 @@
 .home,
 .about,
 .contact,
-.mensclub,
-.travelclub,
-.proshop,
+.mens-club,
+.travel-club,
+.pro-shop,
 .sign-up {
   display: flex;
   height: 90vh;
@@ -20,55 +20,55 @@
 }
 
 .about {
-  /* background-image: url(''); */
+  background-image: url('./img/flag-fountain1.JPG');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  color: #fff;
+  color: #242424;
   font-size: 100px;
 }
 
 .contact {
-  /* background-image: url(''); */
+  background-image: url('./img/flag-fountain1.JPG');
   background-position: center;
-  background-size: fill;
+  background-size: cover;
   background-repeat: no-repeat;
-  color: #fff;
+  color: #242424;
   font-size: 100px;
 }
 
-.mensclub {
-  /* background-image: url(''); */
+.mens-club {
+  background-image: url('./img/flag-fountain1.JPG');
   background-position: center;
-  background-size: fill;
+  background-size: cover;
   background-repeat: no-repeat;
-  color: #fff;
+  color: #242424;
   font-size: 100px;
 }
 
-.travelclub {
-  /* background-image: url(''); */
+.travel-club {
+  background-image: url('./img/flag-fountain1.JPG');
   background-position: center;
-  background-size: fill;
+  background-size: cover;
   background-repeat: no-repeat;
-  color: #fff;
+  color: #242424;
   font-size: 100px;
 }
 
-.proshop {
-  /* background-image: url(''); */
+.pro-shop {
+  background-image: url('./img/flag-fountain1.JPG');
   background-position: center;
-  background-size: fill;
+  background-size: cover;
   background-repeat: no-repeat;
-  color: #fff;
+  color: #242424;
   font-size: 100px;
 }
 
 .sign-up {
-  /* background-image: url(''); */
+  background-image: url('./img/flag-fountain1.JPG');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  color: #fff;
+  color: #242424;
   font-size: 100px;
 }
