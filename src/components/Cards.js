@@ -11,7 +11,7 @@ function Cards() {
           <ul className="cards__items">
             <CardItem
               src={require('../img/HS-sign-offset.JPG')}
-              text="Friendly and knowledgable residents to help you with any questions you might"
+              text="Friendly and knowledgable residents to help you with any questions you might have"
               label="Contact"
               path="/contact"
             />
