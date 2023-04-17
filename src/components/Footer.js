@@ -33,7 +33,7 @@ function Footer() {
             <Link to="/">Contact</Link>
             <Link to="/">Men's Club</Link>
             <Link to="/">Travel Club</Link>
-            <Link to="/">Pro Shop</Link>
+            <Link to="/">Golf Shop</Link>
             <Link to="/">Sign-Up</Link>
           </div>
           <div className="footer-link-items">

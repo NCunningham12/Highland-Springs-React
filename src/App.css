@@ -9,7 +9,7 @@
 .contact,
 .mens-club,
 .travel-club,
-.pro-shop,
+.golf-shop,
 .sign-up {
   display: flex;
   height: 90vh;
@@ -23,33 +23,34 @@
   background-size: cover;
   background-repeat: no-repeat;
   color: #242424;
-  font-size: 26px;
+  font-size: 30px;
   display: flex;
   flex-direction: column;
 }
 
 .about-header {
   display: flex;
-  margin-top: 50px;
+  margin-top: 20px;
   margin-bottom: 150px;
+  font-size: 40px;
 }
 
 .about-blurb {
   margin: 50px;
-  border: 3px solid white;
+  border: 3px solid black;
+  -webkit-text-stroke: 0.5px rgb(0, 0, 0);
+  -webkit-text-fill-color: white;
   border-radius: 8px;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: #fff;
+  background-color: rgba(0, 58, 8, 0.7);
+  color: #000000;
   padding: 30px 50px;
   justify-content: top;
 }
 
 .about-container {
-
   display: flex;
   flex-direction: column;
   max-width: 90%;
-
 }
 
 .contact {
@@ -79,7 +80,7 @@
   font-size: 100px;
 }
 
-.pro-shop {
+.golf-shop {
   background-image: url('./img/flag-fountain1.JPG');
   background-position: center;
   background-size: cover;
@@ -95,4 +96,29 @@
   background-repeat: no-repeat;
   color: #242424;
   font-size: 100px;
+}
+
+.add-members {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px auto;
+}
+
+.add-field {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.add-field input {
+  height: 40px;
+  width: 500px;
+  padding: 10px;
+}
+
+.add-members button {
+  height: 40px;
+  width: 300px;
+  cursor: pointer;
 }

@@ -38,8 +38,8 @@ function Cards() {
             <CardItem
               src={require('../img/bronze-statue.JPG')}
               text="Your one-stop shop for all of your golfing and snacking needs"
-              label="Pro Shop"
-              path="/pro-shop"
+              label="Golf Shop"
+              path="/golf-shop"
             />
           </ul>
         </div>

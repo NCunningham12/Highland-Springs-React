@@ -7,9 +7,10 @@ import About from './components/pages/About';
 import Contact from './components/pages/Contact';
 import MensClub from './components/pages/MensClub';
 import TravelClub from './components/pages/TravelClub';
-import ProShop from './components/pages/ProShop';
+import GolfShop from './components/pages/GolfShop';
 import SignUp from './components/pages/SignUp';
 import Footer from './components/Footer';
+import Insert from './components/pages/Insert';
 
 function App() {
   return (
@@ -22,8 +23,9 @@ function App() {
           <Route path="/contact" Component={Contact} />
           <Route path="/mens-club" Component={MensClub} />
           <Route path="/travel-club" Component={TravelClub} />
-          <Route path="/pro-shop" Component={ProShop} />
+          <Route path="/golf-shop" Component={GolfShop} />
           <Route path="/sign-up" Component={SignUp} />
+          <Route path='/add-member' Component={Insert} />
         </Routes>
         <Footer />
       </Router>
