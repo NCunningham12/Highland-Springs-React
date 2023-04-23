@@ -24,7 +24,7 @@ function App() {
           <Route path="/mens-club" Component={MensClub} />
           <Route path="/travel-club" Component={TravelClub} />
           <Route path="/golf-shop" Component={GolfShop} />
-          <Route path="/sign-up" Component={SignUp} />
+          <Route path="/users" Component={SignUp} />
           <Route path='/add-member' Component={Insert} />
         </Routes>
         <Footer />

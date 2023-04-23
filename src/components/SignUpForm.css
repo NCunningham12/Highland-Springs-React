@@ -1,0 +1,54 @@
+.sign-up-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.form-container {
+  border: 1px solid rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  width: 600px;
+  height: 80vh;
+  margin: 20px;
+  padding: 20px;
+}
+
+.title {
+  padding: 10px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.subtext {
+  display: flex;
+  flex-direction: row;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.loginRedirect {
+  margin-left: 10px;
+  text-decoration: none;
+  font-weight: bolder;
+  color: rgb(0, 195, 255);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkbox {
+  display: flex;
+  flex-direction: row;
+}
+
+
+
