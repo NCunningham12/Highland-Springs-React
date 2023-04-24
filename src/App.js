@@ -11,6 +11,7 @@ import GolfShop from './components/pages/GolfShop';
 import SignUp from './components/pages/SignUp';
 import Footer from './components/Footer';
 import Insert from './components/pages/Insert';
+import LoginPage from './components/pages/LoginPage';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/travel-club" Component={TravelClub} />
           <Route path="/golf-shop" Component={GolfShop} />
           <Route path="/users" Component={SignUp} />
+          <Route path="/login" Component={LoginPage} />
           <Route path='/add-member' Component={Insert} />
         </Routes>
         <Footer />

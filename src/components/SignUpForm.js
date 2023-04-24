@@ -40,7 +40,7 @@ const SignUpForm = () => {
           document.getElementById('output-success').innerHTML = '';
         }, '2000');
         setTimeout(() => {
-          window.location.replace('http://localhost:3000/users/login');
+          window.location.replace('http://localhost:3000/login');
         }, '2000');
       });
 
@@ -139,7 +139,7 @@ const SignUpForm = () => {
         </div>
         <div className="subtext">
           <h4>Already a member?</h4>
-          <Link to="/users/login" className="loginRedirect">
+          <Link to="/login" className="loginRedirect">
             Log In
           </Link>
         </div>
