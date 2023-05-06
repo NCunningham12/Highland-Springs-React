@@ -122,3 +122,34 @@
   width: 300px;
   cursor: pointer;
 }
+
+/* Member List */
+.member-page{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px;
+}
+
+.member-list-display {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.member-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 700px;
+  height: auto;
+  border: 1px solid black;
+  background-color: rgb(184, 184, 184);
+  margin: 10px;
+  padding: 10px;
+  font-family: monospace;
+}
+
+.member-list p {
+  margin: 20px;
+}

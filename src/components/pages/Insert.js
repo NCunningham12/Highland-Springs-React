@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../../App.css';
 import Axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const Insert = () => {
   const [first, setFirst] = useState('');
@@ -94,6 +95,10 @@ const Insert = () => {
       <button type="button" onClick={addMember}>
         Add Member
       </button>
+      <br />
+      <Link to='/members'>
+          View Current Member List
+      </Link>
     </div>
   );
 };
