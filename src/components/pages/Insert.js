@@ -12,6 +12,11 @@ const Insert = () => {
   const [email, setEmail] = useState('');
   const [memberSince, setMemberSince] = useState(0);
 
+  const clearForm = () => {
+    const allInputs = document.querySelectorAll('input');
+    allInputs.forEach((singleInput) => (singleInput.value = ''));
+  };
+
   const addMember = () => {
     Axios.post('http://localhost:3001/add-member', {
       first: first,
@@ -22,8 +27,13 @@ const Insert = () => {
       email: email,
       memberSince: memberSince,
     }).then(() => {
-      console.log('Successfully Added Member')
-    })
+      console.log('Successfully Added Member');
+      document.getElementById('output-success').innerHTML = 'Member Added';
+      clearForm();
+      setTimeout(() => {
+        document.getElementById('output-success').innerHTML = '';
+      }, '2000');
+    });
   };
 
   return (
@@ -92,13 +102,12 @@ const Insert = () => {
           }}
         />
       </div>
-      <button type="button" onClick={addMember}>
+      <p id="output-success" className="output-success"></p>
+      <button className="add-member-button" type="button" onClick={addMember}>
         Add Member
       </button>
       <br />
-      <Link to='/members'>
-          View Current Member List
-      </Link>
+      <Link to="/members">View Current Member List</Link>
     </div>
   );
 };

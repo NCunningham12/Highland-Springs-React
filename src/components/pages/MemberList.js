@@ -5,16 +5,41 @@ import '../MemberList.css';
 
 const MemberList = () => {
   const [memberList, setMemberList] = useState([]);
+  const [order, setOrder] = useState('');
+
+  const clearForm = () => {
+    const allInputs = document.querySelectorAll('input');
+    allInputs.forEach((singleInput) => (singleInput.value = ''));
+  };
 
   const getMembers = () => {
-    
-    Axios.get('http://localhost:3001/members').then((response) => {
-      setMemberList(response.data);
-    });
+    if (order === 'last') {
+      Axios.get('http://localhost:3001/members').then((response) => {
+        setMemberList(response.data);
+      });
+    } else if (order === 'handicap') {
+      Axios.get('http://localhost:3001/members-handicap').then((response) => {
+        setMemberList(response.data);
+      });
+    } else {
+      Axios.get('http://localhost:3001/members').then((response) => {
+        setMemberList(response.data);
+      });
+    }
   };
 
   const deleteMember = (id) => {
-    Axios.delete(`http://localhost:3001/delete/${id}`);
+    let answer = window.confirm('Are you sure you want to delete member?');
+
+    if (answer) {
+      Axios.delete(`http://localhost:3001/delete/${id}`).then(() => {
+        
+        clearForm();
+        setTimeout(() => {
+          alert('Member Deleted');
+        }, '500');
+      });
+    }
   };
 
   return (
@@ -25,8 +50,14 @@ const MemberList = () => {
         </Link>
       </div>
       <div className="dropdown">
-        <label for='order'>Order by: </label>
-        <select name='order' id='order'>
+        <label htmlFor="order">Order by: </label>
+        <select
+          name="order"
+          id="order"
+          onChange={(event) => {
+            setOrder(event.target.value);
+          }}
+        >
           <option value="last">Last Name</option>
           <option value="handicap">Handicap</option>
           <option value="member_since">Member Since</option>

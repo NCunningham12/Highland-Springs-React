@@ -122,3 +122,7 @@
   width: 300px;
   cursor: pointer;
 }
+
+.add-member-button {
+  margin-top: 40px;
+}
