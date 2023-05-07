@@ -40,6 +40,12 @@
   margin: 20px;
 }
 
+.crud-btns {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
 .btn {
   border: 1px solid black;
   border-radius: 4px;

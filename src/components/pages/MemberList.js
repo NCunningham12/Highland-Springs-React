@@ -80,6 +80,11 @@ const MemberList = () => {
                     <h4>Joined: {val.member_since}</h4>
                   </div>
                   <div className="crud-btns">
+                  <button
+                      className="update-btn btn"
+                    >
+                      Edit
+                    </button>
                     <button
                       className="delete-btn btn"
                       onClick={() => deleteMember(val.id)}
