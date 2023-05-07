@@ -1,0 +1,53 @@
+/* Member List */
+
+.link-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 110px;
+}
+
+.dropdown {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.member-container {
+  margin-top: 10px;
+}
+
+.member-list-display {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.member-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 700px;
+  height: auto;
+  border: 1px solid black;
+  background-color: rgb(226, 226, 226);
+  margin: 10px;
+  padding: 10px;
+  font-family: monospace;
+}
+
+.member-list h4 {
+  margin: 20px;
+}
+
+.btn {
+  border: 1px solid black;
+  border-radius: 4px;
+  width: 250px;
+  height: 50px;
+  background-color: rgb(187, 187, 187);
+}
+
+.btn:hover {
+  background-color: rgb(250, 250, 250);
+}
