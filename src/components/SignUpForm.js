@@ -26,7 +26,7 @@ const SignUpForm = () => {
       verifyPassword() === true &&
       initialPass === confirmPass
     ) {
-      Axios.post('http://localhost:3001/users', {
+      Axios.post('http://localhost:3001/sign-up', {
         first: firstName,
         last: lastName,
         username: username,

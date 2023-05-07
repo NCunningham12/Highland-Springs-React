@@ -14,6 +14,22 @@
   padding: 30px;
 }
 
+.subtext {
+  display: flex;
+  justify-content: center;
+}
+
+.sign-up-redirect {
+  margin-left: 10px;
+  text-decoration: none;
+  font-weight: bolder;
+  color: rgb(0, 195, 255);
+}
+
+.sign-up-redirect:hover {
+  color: rgb(68, 211, 255);
+}
+
 .form-inputs {
   margin-top: 70px;
 }

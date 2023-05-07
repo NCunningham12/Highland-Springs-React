@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './LoginForm.css';
 import Axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const LoginForm = () => {
   const [username, setUsername] = useState('');
@@ -32,9 +33,18 @@ const LoginForm = () => {
       <div className="login-wrapper">
         <div className="login-form-container">
           <form className="login-form">
-            <div className="title">
-              <h1>Login</h1>
+            <div className="login-header">
+              <div className="title">
+                <h1>Login</h1>
+              </div>
+              <div className="subtext">
+                <h4>Not a member yet? </h4>
+                <Link to="/sign-up" className="sign-up-redirect">
+                  Sign Up
+                </Link>
+              </div>
             </div>
+            <hr />
             <div className="form-inputs">
               <input
                 name="username"
@@ -63,7 +73,9 @@ const LoginForm = () => {
               <input type="checkbox" onClick={showPassword} /> Show Password
             </div>
             <div className="submit">
-              <button className='login-button' onClick={loginSubmit}>Login</button>
+              <button className="login-button" onClick={loginSubmit}>
+                Login
+              </button>
             </div>
           </form>
         </div>

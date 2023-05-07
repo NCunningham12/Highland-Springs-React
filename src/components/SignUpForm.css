@@ -40,6 +40,10 @@ body {
   color: rgb(0, 195, 255);
 }
 
+.loginRedirect:hover {
+  color: rgb(68, 211, 255);
+}
+
 hr {
   width: 95%;
   transform: translateY(30px);
