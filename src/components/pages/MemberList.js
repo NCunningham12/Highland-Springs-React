@@ -1,6 +1,7 @@
 import Axios from 'axios';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Modal from '../Modal.js';
 import '../MemberList.css';
 
 const MemberList = () => {
@@ -33,7 +34,6 @@ const MemberList = () => {
 
     if (answer) {
       Axios.delete(`http://localhost:3001/delete/${id}`).then(() => {
-        
         clearForm();
         setTimeout(() => {
           alert('Member Deleted');
@@ -42,8 +42,13 @@ const MemberList = () => {
     }
   };
 
+  const editMember = () => {
+
+  }
+
   return (
     <div className="member-page">
+      <Modal />
       <div className="link-container">
         <Link to="/add-member" className="add-member-link">
           "Add Member" Page
@@ -80,11 +85,7 @@ const MemberList = () => {
                     <h4>Joined: {val.member_since}</h4>
                   </div>
                   <div className="crud-btns">
-                  <button
-                      className="update-btn btn"
-                    >
-                      Edit
-                    </button>
+                    <button className="update-btn btn">Edit</button>
                     <button
                       className="delete-btn btn"
                       onClick={() => deleteMember(val.id)}
