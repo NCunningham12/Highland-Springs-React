@@ -1,51 +1,104 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Modal.css';
 
-const Modal = () => {
-  const [modal, setModal] = useState(false);
-
-  const toggleModal = () => {
-    setModal(!modal);
-  };
-
+const Modal = ({ closeModal }) => {
   return (
     <>
       <div className="modal">
-        <div className="overlay">
+        <div
+          className="overlay"
+        >
           <div className="modal-content">
             <h2>Edit Member</h2>
-            <form action="">
-              <label for="first">First name:</label>
+            <form>
+              <label className="label" for="first">
+                First name:
+              </label>
               <br />
-              <input type="text" id="first" name="first" />
+              <input
+                className="edit-input"
+                type="text"
+                id="first"
+                name="first"
+              />
               <br />
-              <label for="last">Last name:</label>
+              <label className="label" for="last">
+                Last name:
+              </label>
               <br />
-              <input type="text" id="last" name="last" />
+              <input className="edit-input" type="text" id="last" name="last" />
               <br />
-              <label for="handicap">Handicap:</label>
+              <label className="label" for="handicap">
+                Handicap:
+              </label>
               <br />
-              <input type="text" id="handicap" name="handicap" />
+              <input
+                className="edit-input"
+                type="text"
+                id="handicap"
+                name="handicap"
+              />
               <br />
-              <label for="address">Address:</label>
+              <label className="label" for="address">
+                Address:
+              </label>
               <br />
-              <input type="text" id="address" name="address" />
+              <input
+                className="edit-input"
+                type="text"
+                id="address"
+                name="address"
+              />
               <br />
-              <label for="phone">Phone Number:</label>
+              <label className="label" for="phone">
+                Phone Number:
+              </label>
               <br />
-              <input type="text" id="phone" name="phone" />
+              <input
+                className="edit-input"
+                type="text"
+                id="phone"
+                name="phone"
+              />
               <br />
-              <label for="email">Email:</label>
+              <label className="label" for="email">
+                Email:
+              </label>
               <br />
-              <input type="text" id="email" name="email" />
+              <input
+                className="edit-input"
+                type="text"
+                id="email"
+                name="email"
+              />
               <br />
-              <label for="joined">Joined:</label>
+              <label className="label" for="joined">
+                Joined:
+              </label>
               <br />
-              <input type="text" id="joined" name="joined" />
+              <input
+                className="edit-input"
+                type="text"
+                id="joined"
+                name="joined"
+              />
               <br />
             </form>
-            <button className="update-btn" onClick={toggleModal}>
+            <button
+              className="update-btn"
+              onClick={() => {
+                closeModal(false);
+              }}
+            >
               Update
+            </button>
+            <button
+              className="cancel-btn"
+              onClick={() => {
+                closeModal(false);
+              }}
+            >
+              Cancel
             </button>
           </div>
         </div>

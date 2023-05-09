@@ -25,6 +25,40 @@
   min-width: 300px;
 }
 
+.open-btn {
+  position: absolute;
+ 
+}
+
 .modal-content h2 {
-  transform: translateX(35%);
+  transform: translateX(30%);
+  font-size: 30px;
+}
+
+.label {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  font-weight: 100;
+}
+
+.edit-input {
+  height: 30px;
+  width: 100%;
+}
+
+.update-btn {
+  margin-top: 30px;
+  height: 40px;
+  width: 180px;
+  border-radius: 4px;
+  background-color: #a1a1a1;
+}
+
+.cancel-btn {
+  background-color: red;
+  margin-top: 30px;
+  margin-left: 10px;
+  height: 40px;
+  width: 180px;
+  border-radius: 4px;
 }

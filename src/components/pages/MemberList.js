@@ -7,6 +7,11 @@ import '../MemberList.css';
 const MemberList = () => {
   const [memberList, setMemberList] = useState([]);
   const [order, setOrder] = useState('');
+  const [modal, setModal] = useState(false);
+
+  // const toggleModal = () => {
+  //   setModal(!modal);
+  // };
 
   const clearForm = () => {
     const allInputs = document.querySelectorAll('input');
@@ -42,13 +47,9 @@ const MemberList = () => {
     }
   };
 
-  const editMember = () => {
-
-  }
-
   return (
     <div className="member-page">
-      <Modal />
+      {modal && <Modal closeModal={setModal} />}
       <div className="link-container">
         <Link to="/add-member" className="add-member-link">
           "Add Member" Page
@@ -85,7 +86,9 @@ const MemberList = () => {
                     <h4>Joined: {val.member_since}</h4>
                   </div>
                   <div className="crud-btns">
-                    <button className="update-btn btn">Edit</button>
+                    <button className="update-btn btn" onClick={() => setModal(true)}>
+                      Edit
+                    </button>
                     <button
                       className="delete-btn btn"
                       onClick={() => deleteMember(val.id)}
