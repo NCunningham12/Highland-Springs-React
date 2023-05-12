@@ -1,7 +1,8 @@
 import React from 'react';
 import './Modal.css';
 
-const Modal = ({ closeModal }) => {
+const Modal = ({ closeModal, memberList }) => {
+
   return (
     <>
       <div className="modal">

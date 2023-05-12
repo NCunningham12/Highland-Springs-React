@@ -12,7 +12,7 @@ import SignUp from './components/pages/SignUp';
 import Footer from './components/Footer';
 import Insert from './components/pages/Insert';
 import LoginPage from './components/pages/LoginPage';
-import MemberList from './components/pages/MemberList';
+import Members from './components/pages/Members';
 
 function App() {
   return (
@@ -29,7 +29,7 @@ function App() {
           <Route path="/sign-up" Component={SignUp} />
           <Route path="/login" Component={LoginPage} />
           <Route path='/add-member' Component={Insert} />
-          <Route path='/members' Component={MemberList} />
+          <Route path='/members' Component={Members} />
         </Routes>
         <Footer />
       </Router>

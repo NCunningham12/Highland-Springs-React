@@ -1,8 +1,8 @@
 import Axios from 'axios';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Modal from '../Modal.js';
-import '../MemberList.css';
+import Modal from './Modal.js';
+import './MemberList.css';
 
 const MemberList = () => {
   const [memberList, setMemberList] = useState([]);
