@@ -1,6 +1,6 @@
 import Axios from 'axios';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import Modal from './Modal.js';
 import './MemberList.css';
 
@@ -8,10 +8,6 @@ const MemberList = () => {
   const [memberList, setMemberList] = useState([]);
   const [order, setOrder] = useState('');
   const [modal, setModal] = useState(false);
-
-  // const toggleModal = () => {
-  //   setModal(!modal);
-  // };
 
   const clearForm = () => {
     const allInputs = document.querySelectorAll('input');
@@ -21,6 +17,7 @@ const MemberList = () => {
   const getMembers = () => {
     if (order === 'last') {
       Axios.get('http://localhost:3001/members').then((response) => {
+        console.log(response.data);
         setMemberList(response.data);
       });
     } else if (order === 'handicap') {
@@ -32,6 +29,12 @@ const MemberList = () => {
         setMemberList(response.data);
       });
     }
+  };
+
+  const updateMembers = (id) => {
+    Axios.get(`http://localhost:3001/members/${id}`).then((response) => {
+
+    })
   };
 
   const deleteMember = (id) => {
@@ -49,7 +52,7 @@ const MemberList = () => {
 
   return (
     <div className="member-page">
-      {modal && <Modal closeModal={setModal} />}
+      {modal && <Modal closeModal={setModal} memberList={memberList[0]} />}
       <div className="link-container">
         <Link to="/add-member" className="add-member-link">
           "Add Member" Page
@@ -86,7 +89,10 @@ const MemberList = () => {
                     <h4>Joined: {val.member_since}</h4>
                   </div>
                   <div className="crud-btns">
-                    <button className="update-btn btn" onClick={() => setModal(true)}>
+                    <button
+                      className="update-btn btn"
+                      onClick={() => setModal(true)}
+                    >
                       Edit
                     </button>
                     <button

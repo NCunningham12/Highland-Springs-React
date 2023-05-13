@@ -1,7 +1,19 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Modal.css';
+import { useParams } from 'react-router-dom';
+import Axios from 'axios';
 
 const Modal = ({ closeModal, memberList }) => {
+
+  const {id} = useParams();
+  const [first, setFirst] = useState('')
+  const [last, setLast] = useState('')
+  const [handicap, setHandicap] = useState(memberList.handicap)
+  const [address, setAddress] = useState(memberList.address)
+  const [phone, setPhone] = useState(memberList.phone)
+  const [email, setEmail] = useState(memberList.email)
+  const [joined, setJoined] = useState(memberList.member_since) 
+
 
   return (
     <>
@@ -21,13 +33,14 @@ const Modal = ({ closeModal, memberList }) => {
                 type="text"
                 id="first"
                 name="first"
+                value={first}
               />
               <br />
               <label className="label" for="last">
                 Last name:
               </label>
               <br />
-              <input className="edit-input" type="text" id="last" name="last" />
+              <input className="edit-input" type="text" id="last" name="last" value={last} />
               <br />
               <label className="label" for="handicap">
                 Handicap:
@@ -38,6 +51,7 @@ const Modal = ({ closeModal, memberList }) => {
                 type="text"
                 id="handicap"
                 name="handicap"
+                value={handicap}
               />
               <br />
               <label className="label" for="address">
@@ -49,6 +63,7 @@ const Modal = ({ closeModal, memberList }) => {
                 type="text"
                 id="address"
                 name="address"
+                value={address}
               />
               <br />
               <label className="label" for="phone">
@@ -60,6 +75,7 @@ const Modal = ({ closeModal, memberList }) => {
                 type="text"
                 id="phone"
                 name="phone"
+                value={phone}
               />
               <br />
               <label className="label" for="email">
@@ -71,6 +87,7 @@ const Modal = ({ closeModal, memberList }) => {
                 type="text"
                 id="email"
                 name="email"
+                value={email}
               />
               <br />
               <label className="label" for="joined">
@@ -82,6 +99,7 @@ const Modal = ({ closeModal, memberList }) => {
                 type="text"
                 id="joined"
                 name="joined"
+                value={joined}
               />
               <br />
             </form>
