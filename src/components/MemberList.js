@@ -1,6 +1,6 @@
 import Axios from 'axios';
 import React, { useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Modal from './Modal.js';
 import './MemberList.css';
 
@@ -31,17 +31,11 @@ const MemberList = () => {
     }
   };
 
-  const updateMembers = (id) => {
-    Axios.get(`http://localhost:3001/members/${id}`).then((response) => {
-
-    })
-  };
-
   const deleteMember = (id) => {
     let answer = window.confirm('Are you sure you want to delete member?');
 
     if (answer) {
-      Axios.delete(`http://localhost:3001/delete/${id}`).then(() => {
+      Axios.delete(`http://localhost:3001/delete/:${id}`).then(() => {
         clearForm();
         setTimeout(() => {
           alert('Member Deleted');
@@ -52,7 +46,7 @@ const MemberList = () => {
 
   return (
     <div className="member-page">
-      {modal && <Modal closeModal={setModal} memberList={memberList[0]} />}
+      {modal && <Modal closeModal={setModal} memberList={memberList} />}
       <div className="link-container">
         <Link to="/add-member" className="add-member-link">
           "Add Member" Page
@@ -75,7 +69,7 @@ const MemberList = () => {
       <div className="member-container">
         <div className="member-list-container">
           <div className="member-list-display" onLoad={getMembers()}>
-            {memberList.map((val, key) => {
+            {memberList.map((val) => {
               return (
                 <div className="member-list">
                   <div className="member-fields">

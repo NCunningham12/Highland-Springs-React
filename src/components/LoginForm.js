@@ -52,6 +52,7 @@ const LoginForm = () => {
                 type="text"
                 placeholder="Username"
                 className="username input"
+                formMethod="post"
                 required
                 onChange={(event) => {
                   setUsername(event.target.value);

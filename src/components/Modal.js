@@ -1,26 +1,28 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './Modal.css';
 import { useParams } from 'react-router-dom';
 import Axios from 'axios';
 
 const Modal = ({ closeModal, memberList }) => {
+  const [first, setFirst] = useState();
+  const [last, setLast] = useState('');
+  const [handicap, setHandicap] = useState('');
+  const [address, setAddress] = useState('');
+  const [phone, setPhone] = useState('');
+  const [email, setEmail] = useState('');
+  const [joined, setJoined] = useState('');
 
-  const {id} = useParams();
-  const [first, setFirst] = useState('')
-  const [last, setLast] = useState('')
-  const [handicap, setHandicap] = useState(memberList.handicap)
-  const [address, setAddress] = useState(memberList.address)
-  const [phone, setPhone] = useState(memberList.phone)
-  const [email, setEmail] = useState(memberList.email)
-  const [joined, setJoined] = useState(memberList.member_since) 
-
+  const updatedMember = () => {
+    Axios.get('http://localhost:3001/members/:id').then((response) => {
+      console.log(response.data.first);
+      setFirst(response.data.first);
+    });
+  };
 
   return (
     <>
-      <div className="modal">
-        <div
-          className="overlay"
-        >
+      <div className="modal" onLoad={() => updatedMember()}>
+        <div className="overlay">
           <div className="modal-content">
             <h2>Edit Member</h2>
             <form>
@@ -34,13 +36,20 @@ const Modal = ({ closeModal, memberList }) => {
                 id="first"
                 name="first"
                 value={first}
+                onChange={updatedMember}
               />
               <br />
               <label className="label" for="last">
                 Last name:
               </label>
               <br />
-              <input className="edit-input" type="text" id="last" name="last" value={last} />
+              <input
+                className="edit-input"
+                type="text"
+                id="last"
+                name="last"
+                value={last}
+              />
               <br />
               <label className="label" for="handicap">
                 Handicap:
